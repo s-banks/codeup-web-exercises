@@ -5,11 +5,11 @@ alert(color_alert + " is my favorite color too!");
 
 alert("Movie rental time!");
 let mermaid = prompt("How many days would you like to keep The Little Mermaid?");
-let bbear = prompt("How many days would you like to keep Brother Bear?");;
-let hercules = prompt("How many days would you like to keep Hercules?");;
+let bbear = prompt("How many days would you like to keep Brother Bear?");
+let hercules = prompt("How many days would you like to keep Hercules?");
 let day_rate = 3;
 let cost = ((mermaid * day_rate) + (bbear * day_rate) + (hercules * day_rate));
-alert("The total cost based on the number of days you have slected is $" + cost);
+alert("The total cost based on the number of days you have selected is $" + cost);
 
 alert("Moving on to making money instead of spending it");
 let gPay = 400;
