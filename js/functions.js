@@ -1,5 +1,5 @@
 "use strict";
-
+(function() {
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -110,4 +110,4 @@ function applyDiscount(price, percentage) {
  let percentage = prompt("Please enter a discount percentage");
 let discAmount = applyDiscount(price, percentage);
 alert("Your discount amount is: $" + discAmount.toFixed(2));
-
+}())
