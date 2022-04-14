@@ -104,11 +104,10 @@ alert("Your tip amount is: $" + tipAmount.toFixed(2));
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(price, percentage) {
-    let discountPrice = (price * percentage);
-    return discountPrice;
+    return (price * (percentage / 100));
 }
  let price = prompt("Please enter the total cost.");
- let percentage = (prompt("Please enter a discount percentage") / 100);
-//console.log(applyDiscount(price, percentage));
+ let percentage = prompt("Please enter a discount percentage");
 let discAmount = applyDiscount(price, percentage);
 alert("Your discount amount is: $" + discAmount.toFixed(2));
+
