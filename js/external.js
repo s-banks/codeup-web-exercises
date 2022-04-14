@@ -28,7 +28,7 @@ let cFull = (cFullQ.toLowerCase() === "yes");
 let cSched = (cSchedQ.toLowerCase() === "yes");
 alert("You can attend school if true: " + (!cFull && !cSched));
 
-alert("Ok, school taken care of, now for some shopping!");
+alert("Ok, school is taken care of, now for some shopping!");
 alert("Let's check to see if you can take advantage of our 2-for-1 special.")
 let premium = confirm("If you a premium member, click OK.")
 let productQty = confirm("Are you buying more than one Commodore 64 today? If so, click OK.")

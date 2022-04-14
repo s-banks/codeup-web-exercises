@@ -19,7 +19,7 @@ function premiumCk() {
     let premium = prompt("Are you a premium member?");
     return premium.toLowerCase() === "yes";
 }
-// Need this var during final check for premium
+// Need this variable during final check for premium
 let isPremium = premiumCk();
 console.log(isPremium);
 
@@ -28,7 +28,7 @@ function quantityCk() {
     let qty = prompt("How many Commodore 64s are you purchasing today?");
     return qty >= 2;
 }
-// Need this var during final check for quantity purchased
+// Need this variable during final check for quantity purchased
 let qtyMoreThanTwo = quantityCk();
 console.log(qtyMoreThanTwo);
 
