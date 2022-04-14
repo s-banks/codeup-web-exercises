@@ -7,7 +7,7 @@ Premium members do not need to buy a specific amount of products. */
 // Date check to determine if offer is expired using pre-determined exp date and today's date.
 let today = new Date().toLocaleDateString()
 console.log(today)
-let offerExp = new Date(2022, 3, 40, 0, 0, 0, 0).toLocaleDateString();
+let offerExp = new Date(2022, 3, 25, 0, 0, 0, 0).toLocaleDateString();
 console.log(offerExp);
 
 // Need this var during final for date check.
