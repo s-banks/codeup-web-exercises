@@ -1,7 +1,7 @@
 "use strict";
 
-// The case setup is here:
-/* A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
+/* The case setup is here:
+ A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
 Premium members do not need to buy a specific amount of products. */
 
 // Date check to determine if offer is expired using pre-determined exp date and today's date.
@@ -42,5 +42,3 @@ console.log(qtyMoreThanTwo);
         alert("Sorry, you do not qualify for this offer");
     }
 })()
-
-
