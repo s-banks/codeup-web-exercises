@@ -1,4 +1,5 @@
 "use strict";
+(function () {
 
 /* ########################################################################## */
 
@@ -106,22 +107,16 @@ function calculateTotal(percent, total) {
     switch(percent) {
         case 0 :
             return total;
-            break;
         case 1 :
             return (total - (total * 0.10));
-            break;
         case 2 :
             return (total - (total * 0.25));
-            break;
         case 3 :
             return (total - (total * 0.35));
-            break;
         case 4 :
             return (total - (total * 0.5));
-            break;
         case 5 :
             return (total - total);
-            break;
     }
 }
  // console.log(calculateTotal(0, 100));
@@ -176,30 +171,22 @@ function enterNumber() {
         let newNumber = parseInt((prompt("Enter a non-zero number please.")));
         if ((newNumber === 0) || (isNaN(newNumber) !== false))  {
             alert("Data entered was not correct");
-           //location.reload();
+            location.reload();
         } else {
-            console.log(newNumber);
-            return newNumber;
+            if (newNumber % 2 === 0) {
+                alert("Your number is even");
+            } else if (newNumber % 2 !== 0) {
+                alert("Your number is odd");
+            } alert("Your number plus 100 is " + (newNumber + 100));
+            if (newNumber > 0) {
+                alert("Your number is positive");
+            } else if (newNumber < 0) {
+                alert("Your number is negative");
+            }
         }
     }
 }
+    enterNumber()
 
-function isEven(num) {
-    let yarr = enterNumber()
-    if (yarr % 2 == 0) {
-        alert("Your number, " + yarr + ", is even.");
-    } else if (yarr % 2 !== 0) {
-        alert("Your number, " + yarr + ", is odd.");
-    }
-    alert("Your number plus 100 is: " + (yarr + 100));
-    if (yarr > 0) {
-        alert("Your number is positive.");
-    } else if (yarr < 0) {
-        alert("Your number is negative.");
-    } else {
-        alert("Zero is neither positive or negative");
-    }
-}
 
-isEven()
-
+}())
