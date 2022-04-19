@@ -29,7 +29,7 @@
 //         alert("Red Dead Redemption!");
 //     } else if (str.toLowerCase() === "orange") {
 //         alert("Orange is the best!");
-//     } else alert("Yea, I go nothing for that.") ;
+//     } else alert("Yea, I got nothing for that.") ;
 // }
 
  // console.log(analyzeColor("blue"));
@@ -69,7 +69,7 @@
 //          alert("Orange, my favorite as well!");
 //          break;
 //      default:
-//          alert("Yea, I go nothing for that.");
+//          alert("Yea, I got nothing for that.");
 //          break;
 //  }
 
@@ -108,13 +108,13 @@ function calculateTotal(percent, total) {
         case 0 :
             return total;
         case 1 :
-            return (total - (total * 0.10));
+            return (total - (total * 0.10));  // total * .9 would also work
         case 2 :
-            return (total - (total * 0.25));
+            return (total - (total * 0.25)); // total * .75
         case 3 :
-            return (total - (total * 0.35));
+            return (total - (total * 0.35)); //total * .65
         case 4 :
-            return (total - (total * 0.5));
+            return (total - (total * 0.5)); //total / 2
         case 5 :
             return (total - total);
     }
@@ -140,11 +140,12 @@ function calculateTotal(percent, total) {
  let luckyNumber = Math.floor(Math.random() * 6);
 
  function getTotal() {
-    let totalPrompt = Number(prompt("Please enter the total of your bill."));
-    alert("Your lucky number is: " + luckyNumber + ". Your bill total was: $" + totalPrompt + ", and after any lucky discounts, your new total is: $" + calculateTotal( luckyNumber, totalPrompt));
+    let totalPrompt = Number(prompt("Please enter the total of your bill.")); //parseFloat was recommended over Number
+    alert("Your lucky number is: " + luckyNumber + "\n. Your bill total was: $" + totalPrompt + ", and after any lucky discounts, your new total is: $" + calculateTotal( luckyNumber, totalPrompt));
  }
  //getTotal()
 
+    // \n The slash n bumps part of the alert to a new line
 
 
 /**
