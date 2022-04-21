@@ -13,41 +13,38 @@
 // showMultiplicationTable(10);
 // Oops, above was done as while loop, not as a for loop. redoing below
 
-   function showMultiplicationTable(val) {
-       for(let itr = 1; itr <= 10; itr++) {
-           console.log(`${val} * ${itr} = ` + (itr * val));
-       }
-   }
-showMultiplicationTable(10)
-console.log("--------------- \n---------------");
-function rndmTen() {
-    for (let itr = 1; itr <= 10; itr++) {
-        let val = Math.floor(Math.random() * 10) + 1;
-        if (val % 2 !== 0) {
-            console.log('Here is an odd number: ' + val);
-        } else {
-            console.log('Here is an even number: ' + val);
-        }
-    }
-}
-rndmTen()
-console.log("--------------- \n---------------");
+	function showMultiplicationTable(val) {
+		for(let itr = 1; itr <= 10; itr++) {
+			console.log(`${val} * ${itr} = ` + (itr * val));
+		}
+	}
+	showMultiplicationTable(10)
+	console.log("--------------- \n---------------");
+	function rndmTen() {
+		for (let itr = 1; itr <= 10; itr++) {
+			let val = Math.floor(Math.random() * 10) + 1;
+			if (val % 2 !== 0) {
+				console.log('Here is an odd number: ' + val);
+			} else {
+				console.log('Here is an even number: ' + val);
+			}
+		}
+	}
+	rndmTen()
+	console.log("--------------- \n---------------");
 
-function loopLoop() {
-    let start = "";
-    for (let itr = 1; itr <= 9; itr++) {
-        for (let y = 1; y <= itr; y++) {
-            start += itr;
-        }
-        console.log(start);
-        start = "";
-    }
-}
-loopLoop()
-
-
-
-console.log("--------------- \n---------------");
+	function loopLoop() {
+		let start = "";
+		for (let itr = 1; itr <= 9; itr++) {
+			for (let y = 1; y <= itr; y++) {
+				start += itr;
+			}
+			console.log(start);
+			start = "";
+		}
+	}
+	loopLoop()
+	console.log("--------------- \n---------------");
 
 
 
