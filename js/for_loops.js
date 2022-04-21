@@ -34,10 +34,21 @@ rndmTen()
 console.log("--------------- \n---------------");
 
 function loopLoop() {
-    for (let itr = 1; itr < 10; itr++) {
-
+    let start = "";
+    for (let itr = 1; itr <= 9; itr++) {
+        for (let y = 1; y <= itr; y++) {
+            start += itr;
+        }
+        console.log(start);
+        start = "";
     }
 }
+loopLoop()
+
+
+
+console.log("--------------- \n---------------");
+
 
 
 }())
