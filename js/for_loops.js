@@ -19,10 +19,11 @@
 		}
 	}
 	showMultiplicationTable(10)
+
 	console.log("--------------- \n---------------");
 	function rndmTen() {
 		for (let itr = 1; itr <= 10; itr++) {
-			let val = Math.floor(Math.random() * 10) + 1;
+			let val = Math.floor(Math.random() * 181) + 20;
 			if (val % 2 !== 0) {
 				console.log('Here is an odd number: ' + val);
 			} else {
@@ -31,8 +32,8 @@
 		}
 	}
 	rndmTen()
-	console.log("--------------- \n---------------");
 
+	console.log("--------------- \n---------------");
 	function loopLoop() {
 		let str = "";
 		for (let itr = 1; itr <= 9; itr++) {
