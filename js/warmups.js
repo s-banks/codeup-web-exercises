@@ -1,7 +1,7 @@
 "use strict";
 
 console.log("Yay! I completed the warm-up!");
-
+console.log("--------------- \n---------------");
 function fizzBuzz() {
 	for (let i = 1; i <= 100; i++) {
 		if(i % 15 === 0) {
@@ -16,3 +16,4 @@ function fizzBuzz() {
 	}
 }
 fizzBuzz()
+console.log("--------------- \n---------------");
