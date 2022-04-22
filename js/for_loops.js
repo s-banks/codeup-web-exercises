@@ -34,13 +34,13 @@
 	console.log("--------------- \n---------------");
 
 	function loopLoop() {
-		let start = "";
+		let str = "";
 		for (let itr = 1; itr <= 9; itr++) {
 			for (let y = 1; y <= itr; y++) {
-				start += itr;
+				str += itr;
 			}
-			console.log(start);
-			start = "";
+			console.log(str);
+			str = "";
 		}
 	}
 	loopLoop()
