@@ -35,17 +35,23 @@
 
 	console.log("--------------- \n---------------");
 	function loopLoop() {
-		let str = "";
+		//let str = "";
 		for (let itr = 1; itr <= 9; itr++) {
+			let str = ""; //edit in class review
 			for (let y = 1; y <= itr; y++) {
 				str += itr;
 			}
 			console.log(str);
-			str = "";
+			//str = "";
 		}
 	}
 	loopLoop()
 	console.log("--------------- \n---------------");
+
+//below here added on my own, but after class review.
+
+
+
 
 
 
