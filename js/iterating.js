@@ -21,7 +21,10 @@ let names = ["Ashley", "Gia", "Rileigh", "Aedan"];
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-console.log(names);
+console.log(names[0]);
+console.log(names[1]);
+console.log(names[2]);
+console.log(names[3]);
 
     console.log("--------------- \n---------------");
     /**
@@ -38,8 +41,8 @@ for(let itr = 0; itr < names.length; itr++) {
      */
 console.log("--------------- \n---------------");
 
-names.forEach(function(names) {
-    console.log(names);
+names.forEach(function(name) {
+    console.log(name);
     })
 
     /**
