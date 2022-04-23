@@ -50,9 +50,14 @@
 
 //below here added on my own, but after class review.
 
+	function hundredToFive() {
+		for (let itr = 100; itr > 4; (itr -= 5)) {
+			console.log(itr);
+		}
+	}
+hundredToFive()
 
 
-
-
+	console.log("--------------- \n---------------");
 
 }())
