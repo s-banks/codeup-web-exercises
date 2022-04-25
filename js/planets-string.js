@@ -28,6 +28,9 @@
     let planetsBackToString = planetsArray.join('<br>')
     console.log(planetsBackToString);
     console.log("--------------- \n---------------");
+
+
+
     let array1 = planetsArray[0];
     let array2 = planetsArray[1];
     let array3 = planetsArray[2];
@@ -41,6 +44,6 @@
         + '<li>' + array6 + '</li>' + '<li>' + array7 + '</li>' + '<li>' + array8 + '</li>' + '</ul>');
     console.log(planetUOList);
 
-
+//Look at how the last one was done in the in-class review. Much more concise.
 
 })();
