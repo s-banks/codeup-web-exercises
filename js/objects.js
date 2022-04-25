@@ -88,6 +88,11 @@
         {title: 'Battle Ground', author: {firstName: "Jim", lastName: "Butcher" }},
         {title: 'The Great Cleric', author: {firstName: "Broccoli", lastName: "Lion" }},
     ];
+
+    // console.log(books[0].title);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -133,12 +138,9 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-function createBook(val, val2) {
-
-    }
-
-
-
-
+    let newBook = prompt('Please enter the title and author of your book');
+    console.log(newBook);
+    var bookArray = newBook.split(' ');
+    console.log(bookArray);
 
 })();
