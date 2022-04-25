@@ -32,7 +32,7 @@
     person.sayHello = function () {
         console.log("Hello from " + person.firstName + " " + person.lastName);
     };
-    user.sayHello();
+    person.sayHello();
     console.log("--------------- \n---------------");
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
