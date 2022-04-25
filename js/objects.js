@@ -64,7 +64,7 @@
         if (shoppers.amount < 200) {
             console.log(shoppers.name + " Owes: $" + shoppers.amount.toFixed(2));
         } else {
-            console.log(shoppers.name + " Owes: $" + (shoppers.amount * 0.88).toFixed(2) + " after a 12% discount");
+            console.log(shoppers.name + " Owes: $" + (shoppers.amount * 0.88).toFixed(2) + " after a 12% discount. Original total was: $" + shoppers.amount);
         }
     })
     console.log("--------------- \n---------------");
@@ -118,7 +118,7 @@
      *      ...
      */
     books.forEach(function(books, idx) {
-            console.log("Book # "  + (idx + 1) + '\n', 'Title: ' + books.title + '\n', 'Author: ' + books.author.firstName + " " + books.author.lastName);
+            console.log("Book # "  + (idx + 1) + '\nTitle: ' + books.title + '\nAuthor: ' + books.author.firstName + " " + books.author.lastName);
         })
 
     console.log("--------------- \n---------------");
@@ -138,9 +138,10 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    let newBook = prompt('Please enter the title and author of your book');
-    console.log(newBook);
-    var bookArray = newBook.split(' ');
-    console.log(bookArray);
+
+    // let newBook = prompt('Please enter the title and author of your book');
+    // console.log(newBook);
+    // var bookArray = newBook.split(' ');
+    // console.log(bookArray);
 
 })();
