@@ -12,12 +12,12 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    let user = {
+    let person = {
         firstName: "Rick",
         lastName: "James"
     };
-    console.log(user.firstName);
-    console.log(user.lastName);
+    console.log(person.firstName);
+    console.log(person.lastName);
 
 
     /**
@@ -29,8 +29,8 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    user.sayHello = function () {
-        console.log("Hello from " + user.firstName + " " + user.lastName);
+    person.sayHello = function () {
+        console.log("Hello from " + person.firstName + " " + person.lastName);
     };
     user.sayHello();
     console.log("--------------- \n---------------");
