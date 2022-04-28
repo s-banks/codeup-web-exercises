@@ -18,8 +18,12 @@ console.log("--------------- \n---------------");
 // fizzBuzz()
 // console.log("--------------- \n---------------");
 
-let allFirstLetters = ['dog', 'cat', 'frog', 'bat'];
+// let allFirstLetters = ['dog', 'cat', 'frog', 'bat'];
+// function stipLetters(arr) {
+//
+// }
 
-function stipLetters(arr) {
-
+function alphabetSoup(str) {
+	return str.split('').sort().join('');
 }
+console.log(alphabetSoup('anime'));
