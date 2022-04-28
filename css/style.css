@@ -1,4 +1,37 @@
+/*intro to css exercise && selectors exercise*/
+
+body {
+    background-color: darkgrey;
+    background-image: url("../img/welcomebk.jpg");
+    font-family: Varela Round, serif;
+}
+
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
 }
+
+h2 {
+    color: orangered;
+    text-decoration: underline;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+table, th, td {
+    border: 1px solid;
+    text-align: center;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:orange;
+}
+/* active or selected link (:active) */
+a:active {
+    color: green;
+}
+
