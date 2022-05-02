@@ -23,7 +23,16 @@ console.log("--------------- \n---------------");
 //
 // }
 
-function alphabetSoup(str) {
-	return str.split('').sort().join('');
+// function alphabetSoup(str) {
+// 	return str.split('').sort().join('');
+// }
+// console.log(alphabetSoup('anime'));
+
+function addArray(arr) {
+	let arrsum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		arrsum += arr[i];
+	}
+	return arrsum;
 }
-console.log(alphabetSoup('anime'));
+console.log(addArray([1, 2, 3, 4, 5]))
