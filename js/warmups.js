@@ -28,11 +28,39 @@ console.log("--------------- \n---------------");
 // }
 // console.log(alphabetSoup('anime'));
 
-function addArray(arr) {
-	let arrsum = 0;
-	for (let i = 0; i < arr.length; i++) {
-		arrsum += arr[i];
-	}
-	return arrsum;
-}
-console.log(addArray([1, 2, 3, 4, 5]))
+// function addArray(arr) {
+// 	let arrsum = 0;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		arrsum += arr[i];
+// 	}
+// 	return arrsum;
+// }
+// console.log(addArray([1, 2, 3, 4, 5]))
+
+
+// Screwed this one all up. See walk-through
+// let product1 = {
+// 	name: 'Hammar',
+// 	priceInCents: 400,
+// 	description: 'It is a a hammar.',
+// 	inventory: 25034
+// }
+//
+// let product2 = {
+// 	name: 'Computer',
+// 	priceInCents: 40000,
+// 	description: 'It is a computer.',
+// 	inventory: 33000
+// }
+//
+// let product3 = {
+// 	name: 'Ruler',
+// 	priceInCents: 1000,
+// 	description: 'It is a ruler.',
+// 	inventory: 2200
+// }
+//
+// function returnProductEssentialDetails(val) {
+//  return val.name;
+// }
+// console.log(returnProductEssentialDetails(product1));
