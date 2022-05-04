@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #C1C1C1;
+    display: flex;
+    color: black;
+}
+.div {
+
+}
+.lft-bar {
+    /*font-family: 'Varela Round', sans-serif;*/
+    display: flex;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    padding: 0.2em;
+    margin: auto;
+    font-family: 'Varela Round', sans-serif;
+}
+.rt-bar {
+    display: flex;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+/* link formatting
+unvisited link (:link) */
+a:link {
+    color:black;
+}
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+/* active or selected link (:active) */
+a:active {
+    color: orangered;
+}
