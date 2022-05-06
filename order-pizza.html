@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>Pizza World</title>
@@ -33,9 +33,9 @@
 		</div>
 	</div>
 </nav>
-	<div class="container container-fluid">
-	<div class="jumbotron">
-		<div class="bg-success bg-light bg-opacity-25 text-center">
+	<div class="container">
+	<div class="jumbotron d-flex align-items-center">
+		<div class="p-3 bg-light bg-opacity-75 text-center my-auto flex-fill">
 			Welcome to Pizza World!
 		</div>
 	</div>
@@ -48,26 +48,53 @@
 				<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge bg-secondary rounded-pill">3</span>Toppings</button>
 			</div>
 <!--Cards-->
-			<div class="card" style="width: 100%;">
-				<div class="card-header">Header</div>
+			<div class="card style=width: 100%;">
+				<div class="card-header bg-primary text-light">Choose Size and Crust</div>
 				<div class="card-body">
-<!--					<h5 class="card-title">Blue bar here</h5>-->
 					<div class="card-body">
-						<div class="card-header">Hand Tossed</div>
-<!--						<h5 class="card-title">Grey bar here - Hand Tossed</h5>-->
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-dark">Hand Tossed</li>
+							<li class="list-group-item">Garlic seasoned crust with a rich, buttery taste. </li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="radio" name="crusttype-size" id="hand-small">
+								<label class="form-check-label" for="hand-small">
+								Small (10")
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="radio" name="crusttype-size" id="hand-medium">
+								<label class="form-check-label" for="hand-medium">
+								Medium (12")
+								</label>
+							</li>
+						</ul>
 					</div>
 					<div class="card-body">
-						<div class="card-header">Crispy Thin</div>
-<!--						<h5 class="card-title">Grey bar here - Crispy Thin</h5>-->
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-dark">Crispy Thin</li>
+							<li class="list-group-item">This enough for optimum crispy to crunchy ratio.</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="radio" name="crusttype-size" id="crispy-medium">
+								<label class="form-check-label" for="crispy-medium">
+									Medium (12")
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="radio" name="crusttype-size" id="crispy-large">
+								<label class="form-check-label" for="crispy-large">
+									Large (14")
+								</label>
+							</li>
+						</ul>
 					</div>
-					<a href="#" class="btn btn-primary">Next Step ></a>
+				</div>
+				<div class=" card-footer bg-secondary bg-opacity-25">
+					<a href="#" class="btn btn-primary float-end">Next Step ></a>
 				</div>
 			</div>
 		</nav>
 		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Yarrrr!!!</div>
 			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
 			<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
 		</div>
