@@ -1,8 +1,9 @@
 "use strict";
 
+// all of these are from: https://java.codeup.com/extra-exercises/javascript/arrays-and-objects/
 // Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the
 // numbers type in ascending order.
-var test = ['fred', true, 5, 3, 'yay', 7]
+let test = ['fred', true, 5, 3, 'yay', 7]
 function filterNumbers(arr) {
 	let bucket = [];
 	arr.forEach(function(elem) {
@@ -10,7 +11,7 @@ function filterNumbers(arr) {
 			bucket.push(elem);
 		}
 	})
-	console.log(bucket);;
+	console.log(bucket);
 }
 filterNumbers(test);
 
@@ -28,7 +29,7 @@ let obj = [
 	},
 	{
 		name: "Mr. Pig",
-		breed: "Mastif",
+		breed: "Mastiff",
 		age: 10
 	}
 ]
@@ -41,7 +42,7 @@ function getOlder(arr) {
 }
 getOlder(obj)
 
-//Write a function, washCars() that takes in a array of car objects and sets the boolean properties of isDirty to false.
+//Write a function, washCars() that takes in an array of car objects and sets the boolean properties of isDirty to false.
 let obj2 = [
 	{
 		make: 'Volvo',
@@ -63,4 +64,40 @@ let obj2 = [
 	}
 ]
 
+function washCars(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		arr[i].isDirty = false;
+	}
+	console.log(arr);
+}
+washCars(obj2)
+
+//Write a function, adminList() that takes in an array of user objects and returns a count of all admins based on the
+// isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user
+// objects that are admins.
+
+let obj3 = [
+	{
+		isAdmin: true,
+		email: 'user1@email.com'
+	},
+	{
+		isAdmin: true,
+		email: 'user2@email.com'
+	},
+	{
+		isAdmin: false,
+		email: 'user3@email.com'
+	}
+]
+function adminList(arr) {
+	let adminQty = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].isAdmin === true) {
+			adminQty += 1;
+		}
+	}
+	console.log(adminQty);
+}
+adminList(obj3);
 
