@@ -104,3 +104,26 @@ console.log("--------------- \n---------------");
 // console.log(largest);
 // end of previous warmup
 
+// Write a function that will accept an array of objects and return the object from the array that is the most colorful.
+// function colors(arr) {
+// 	Nope, didn't happen'
+// }
+
+
+// write a function that will accept a string. It should return an object with the following properties: string, size, containsLetterFromRSTLNE, and isOneWord.
+//
+// 	Ex 1. makeObjectFromString(“tacocat”) -> {
+// 	string: “tacocat”,
+// 	size: 7,
+// 		containsLetterFromRSTLNE: true,
+// 		isOneWord: true
+// };
+//
+// Ex 2. makeObjectFromString(“John Jacob”) -> {
+// 	string: “John Jacob”,
+// 	size: 10,
+// 		containsLetterFromRSTLNE: false,
+// 		isOneWord: false
+// };
+
+
