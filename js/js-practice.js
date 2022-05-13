@@ -127,17 +127,5 @@ function adminObject(arr) {
 adminObject(obj3);
 console.log("--------------- \n---------------");
 
-//Create a function, makeSandwichObjects() that takes in two array of strings, breads and fillings and returns an
-// array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of
-// the two passed in arrays. Assume the two array inputs are the same length.
+//Next items from: https://java.codeup.com/extra-exercises/javascript/arrays/
 
-function makeSandwichObjects(arr1, arr2) {
-
-}
-
-
-
-
-
-
-console.log("--------------- \n---------------");
