@@ -14,6 +14,7 @@ function filterNumbers(arr) {
 	console.log(bucket);
 }
 filterNumbers(test);
+console.log("--------------- \n---------------");
 
 // Write a function, getOlder() that takes in array of dog objects and increases the value of each object's age property by 1.
 let obj = [
@@ -41,6 +42,7 @@ function getOlder(arr) {
 	console.log(arr);
 }
 getOlder(obj)
+console.log("--------------- \n---------------");
 
 //Write a function, washCars() that takes in an array of car objects and sets the boolean properties of isDirty to false.
 let obj2 = [
@@ -71,6 +73,7 @@ function washCars(arr) {
 	console.log(arr);
 }
 washCars(obj2)
+console.log("--------------- \n---------------");
 
 //Write a function, adminList() that takes in an array of user objects and returns a count of all admins based on the
 // isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user
@@ -101,3 +104,40 @@ function adminList(arr) {
 }
 adminList(obj3);
 
+function adminEmail(arr) {
+	let adminMail = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].isAdmin === true) {
+			adminMail.push(arr[i].email)
+		}
+	}
+	console.log(adminMail);
+}
+adminEmail(obj3);
+
+function adminObject(arr) {
+	let adminObj = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].isAdmin === true) {
+			adminObj.push(arr[i]);
+		}
+	}
+	console.log(adminObj);
+}
+adminObject(obj3);
+console.log("--------------- \n---------------");
+
+//Create a function, makeSandwichObjects() that takes in two array of strings, breads and fillings and returns an
+// array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of
+// the two passed in arrays. Assume the two array inputs are the same length.
+
+function makeSandwichObjects(arr1, arr2) {
+
+}
+
+
+
+
+
+
+console.log("--------------- \n---------------");
