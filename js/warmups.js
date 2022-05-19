@@ -126,4 +126,11 @@ console.log("--------------- \n---------------");
 // 		isOneWord: false
 // };
 
-
+//     DOM Practice Question #1
+//     Create an HTML file called dom-practice.html in codeup-web-exercises repos.
+// Put a text input on an html page with id of "color"
+// Put a button on the page with id of "changeColor"
+// The above is already done from your previous warm-up :)
+// Use an Event listener to trigger when the button is clicked.
+//         Use the value to change the background-color of the page to match the user's input value.
+//         example of input: "#00000", "black", "#FF00FF"

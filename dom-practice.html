@@ -16,7 +16,7 @@
 	</style>
 </head>
 
-<body>
+<body class="body">
 
 <h1>Lets practice DOM!</h1>
 
@@ -30,6 +30,15 @@
 	<input type="color" id="color">
 	<button type="button" id="changeColor">Button!</button>
 </div>
+<!--<script>-->
+<!--	let newColor = document.getElementById("color");-->
+<!--	const element = document.getElementById("changeColor");-->
+<!--	element.addEventListener("click", colorChange);-->
+<!--	function colorChange() {-->
+<!--		document.getElementsByClassName("body").style.backgroundColor = "newColor";-->
+<!--	}-->
+
+<!--</script>   See the dom practice in umbriel-->
 
 <div class="question">
 	<h1>Question 2</h1>
@@ -38,7 +47,17 @@
 	<ul id="todosList">
 	</ul>
 </div>
-
+<script>
+	document.getElementById("addTodo").addEventListener("click", function () {
+		let newList = document.getElementById("todo").value;
+		let formList = document.getElementById('todosList');
+		if (newList !== "") {
+			formList.innerHTML += `<li>${newList} ${formList.children.length + 1}</li>`;
+		} else {
+			alert("Oops, try again")
+		}
+	});
+</script>
 
 <div class="question">
 	<h1>Question 3</h1>
