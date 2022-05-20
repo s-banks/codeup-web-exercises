@@ -42,7 +42,7 @@
 	let rgbaRandom = rgbaOptions[Math.floor(Math.random()*rgbaOptions.length)];
 	let rgbaRandom2 = rgbaOptions[Math.floor(Math.random()*rgbaOptions.length)];
 	let rgbaRandom3 = rgbaOptions[Math.floor(Math.random()*rgbaOptions.length)];
-	let rgbaNew = 'rgba(' + rgbaRandom + ',' + rgbaRandom2 + ',' + rgbaRandom3 + ',0.5)';
+	let rgbaNew = 'rgba(' + rgbaRandom + ',' + rgbaRandom2 + ',' + rgbaRandom3 + ',0.3)';
 	$(document).ready(function(){
 		$("h1").on('click',(function(){
 			$('h1').css('color', colorChoice).css('background', `${rgbaNew}`);
