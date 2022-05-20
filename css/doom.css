@@ -1,0 +1,36 @@
+#initial {
+    display: none;
+}
+
+#konami{
+    display: none;
+}
+
+#gta {
+    display: none;
+}
+
+body {
+    background-image: url("../img/doom.jpg");
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #FFFFFF;
+    background-color: rgba(43, 45, 47, 0.6);
+}
+
+ul {
+    list-style: none;
+    color: #FFFFFF;
+    font-size: xx-large;
+    background-color: rgba(43, 45, 47, 0.6);
+}
+
+#doom {
+
+}

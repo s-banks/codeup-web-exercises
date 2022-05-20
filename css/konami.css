@@ -1,0 +1,22 @@
+#initial {
+    display: none;
+}
+
+#doom {
+    display: none;
+}
+
+#gta {
+    display: none;
+}
+
+body{
+    background-image: url("../img/80sbackground2.jpg");
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0fb784;
+}
+

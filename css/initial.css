@@ -1,0 +1,25 @@
+#konami {
+    display: none;
+}
+
+#doom {
+    display: none;
+}
+
+#gta {
+    display: none;
+}
+
+body {
+    background-image: url("../img/gamer.jpg");
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1, h2, h3{
+    color: #FFFFFF;
+    background-color: rgba(43, 45, 47, 0.3);
+}

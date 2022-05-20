@@ -1,124 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Konami Code</title>
+	<title>Konami Code</title>
+	    <link id="csssheet" href="css/initial.css" type="text/css" rel="stylesheet">
+<!--	<link id="csssheet" href="css/konami.css" type="text/css" rel="stylesheet">-->
+<!--	<link id="csssheet" href="css/doom.css" type="text/css" rel="stylesheet">-->
+<!--	<link id="csssheet" href="css/gta.css" type="text/css" rel="stylesheet">-->
 </head>
 <body>
-<h1>Konami Code</h1>
+
+<div id="initial">
+	<h1 id="main-h1" style="text-align: center">Game Codes</h1>
+	<h2 style="text-align: center">Konami(T3hCla$$ic)...Doom(g0d)...GTA(JetpAck)</h2>
+	<h3 style="text-align: center">Can you guess them??</h3>
+</div>
+
+
+<div id="konami">
+	<h1 style="text-align: center">Konami Rolled!!!!</h1>
+		<iframe src="https://giphy.com/embed/FbPsiH5HTH1Di" width="480" height="445" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br>
+		<img src="../img/rick2.jpg"><img src="../img/rick.jpg">
+</div>
+
+
+<div id="doom">
+	<h1>Play Doom!!!!</h1>
+	<iframe
+			width="800"
+			height="470"
+			frameborder="0"
+			src="https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Fcustom%2Fdos%2Fdoom.jsdos?anonymous=1"
+			allowfullscreen>
+	</iframe>
+	<p>
+	<ul>
+		<li>Escape to release the mouse cursor</li>
+		<li>WASD or arrows to move</li>
+		<li>Mouse to pan camera</li>
+	</ul>
+	</p>
+</div>
+
+
+<div id="gta">
+	<h1 style="text-align: center">GTA!!!!</h1>
+</div>
 
 
 <script src="js/jquery-3.6.0.js"></script>
-<script>
-    "use strict";
-
-    let konamiFrame = {
-    konamiTrigger: function() {
-        let konamiCode = [38,38,40,40,37,39,37,39,66,65,13],
-                started = false,
-                count = 0;
-        $(document).keyup(function(e){
-            let reset = function() {
-                started = false;
-                count = 0;
-                return;
-            };
-            let key = e.keyCode;
-            if(!started){
-                if(key == 38){
-                    started = true;
-                }
-            }
-            if (started){
-
-                if (konamiCode[count] == key){
-                    count++;
-                } else {
-                    reset();
-                }
-                if (count == 11){
-                    //alert('Code worked');
-                    window.open('https://youtu.be/dQw4w9WgXcQ?t=43', '_blank');
-                    reset();
-                }
-            } else {
-                reset();
-            }
-        });
-    }
-    }
-    konamiFrame.konamiTrigger();
-
-    let doomFrame = {
-        doomTrigger: function() {
-            let doomCode = [17,18,192,73,68,68,81,68,13],
-                    started = false,
-                    count = 0;
-            $(document).keyup(function(e){
-                let reset = function() {
-                    started = false;
-                    count = 0;
-                    return;
-                };
-                let key = e.keyCode;
-                if(!started){
-                    if(key == 17){
-                        started = true;
-                    }
-                }
-                if (started){
-
-                    if (doomCode[count] == key){
-                        count++;
-                    } else {
-                        reset();
-                    }
-                    if (count == 9){
-                        alert('doom');
-                        reset();
-                    }
-                } else {
-                    reset();
-                }
-            });
-        }
-    }
-    doomFrame.doomTrigger();
-
-    let gtaFrame = {
-        gtaTrigger: function() {
-            let gtaCode = [82,79,67,75,69,84,77,65,78,13],
-                    started = false,
-                    count = 0;
-            $(document).keyup(function(e){
-                let reset = function() {
-                    started = false;
-                    count = 0;
-                    return;
-                };
-                let key = e.keyCode;
-                if(!started){
-                    if(key == 82){
-                        started = true;
-                    }
-                }
-                if (started){
-
-                    if (gtaCode[count] == key){
-                        count++;
-                    } else {
-                        reset();
-                    }
-                    if (count == 10){
-                        alert('gta');
-                        reset();
-                    }
-                } else {
-                    reset();
-                }
-            });
-        }
-    }
-    gtaFrame.gtaTrigger();
-</script>
+<script src="js/konami.js"></script>
 </body>
 </html>
