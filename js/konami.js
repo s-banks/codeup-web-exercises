@@ -1,4 +1,14 @@
 "use strict";
+
+function buttonToggle() {
+	let toggle = document.getElementById("cheater");
+	if (toggle.style.display === "none") {
+		toggle.style.display = "block";
+	} else {
+		toggle.style.display = "none";
+	}
+}
+
 (function () {
 	let konamiFrame = {
 		konamiTrigger: function() {
@@ -9,7 +19,6 @@
 				let reset = function() {
 					started = false;
 					count = 0;
-					return;
 				};
 				let key = e.keyCode;
 				if(!started){
@@ -18,7 +27,6 @@
 					}
 				}
 				if (started){
-
 					if (konamiCode[count] == key){
 						count++;
 					} else {
@@ -37,6 +45,7 @@
 	}
 	konamiFrame.konamiTrigger();
 
+
 	let doomFrame = {
 		doomTrigger: function() {
 			let doomCode = [17,18,192,73,68,68,81,68,13],
@@ -46,7 +55,6 @@
 				let reset = function() {
 					started = false;
 					count = 0;
-					return;
 				};
 				let key = e.keyCode;
 				if(!started){
@@ -82,7 +90,6 @@
 				let reset = function() {
 					started = false;
 					count = 0;
-					return;
 				};
 				let key = e.keyCode;
 				if(!started){
@@ -107,6 +114,44 @@
 			});
 		}
 	}
+
 	gtaFrame.gtaTrigger();
 
+	let homeFrame = {
+		homeTrigger: function() {
+			let homeCode = [72,79,77,69,13],
+				started = false,
+				count = 0;
+			$(document).keyup(function(e){
+				let reset = function() {
+					started = false;
+					count = 0;
+					return;
+				};
+				let key = e.keyCode;
+				if(!started){
+					if(key == 72){
+						started = true;
+					}
+				}
+				if (started){
+
+					if (homeCode[count] == key){
+						count++;
+					} else {
+						reset();
+					}
+					if (count == 5){
+						document.getElementById('csssheet').href = 'css/initial.css';
+						reset();
+					}
+				} else {
+					reset();
+				}
+			});
+		}
+	}
+	homeFrame.homeTrigger();
+
 }())
+

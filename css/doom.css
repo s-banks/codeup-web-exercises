@@ -10,6 +10,10 @@
     display: none;
 }
 
+#sub-initial {
+    display: none;
+}
+
 body {
     background-image: url("../img/doom.jpg");
     background-size: cover;
@@ -31,6 +35,3 @@ ul {
     background-color: rgba(43, 45, 47, 0.6);
 }
 
-#doom {
-
-}
