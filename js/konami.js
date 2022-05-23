@@ -135,7 +135,6 @@ function buttonToggle() {
 					}
 				}
 				if (started){
-
 					if (homeCode[count] == key){
 						count++;
 					} else {
