@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Title</title>
 	<link rel="stylesheet" href="css/jquery-faq.css">
-	<script src="js/jquery-3.6.0.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
@@ -43,23 +42,7 @@
 	<dd>In the spring of 1846, all eyes turned toward events on the Rio Grande. When a long-brewing territorial dispute between the U.S. and Mexico led to war, residents of both nations clamored for details. Battle accounts filled the columns of the daily papers.</dd>
 </dl>
 <a href="#">Show All</a>
-<script>
-	$( "dd" ).addClass( "invisible" );
-// $('dt').click(function () {
-// 	if ($(this).hasClass('class-here')) {
-// 		$(this).removeClass('class-here');
-// 	} else {
-// 	#(this).addClass('class-here');
-// }
-// });
-	$('dt').click(function () {
-		$(this).toggleClass('highlight');
-		$(this).next().toggleClass('invisible');
-	});
-
-	$('a').click(function () {
-		$('dd').toggleClass('invisible');
-	});
-</script>
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/jquery-faq.js"></script>
 </body>
 </html>
