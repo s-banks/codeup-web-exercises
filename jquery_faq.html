@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/jquery-faq.css">
+	<script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+<dl>
+	<dt>Abilene State Park</dt>
+	<dd>A large feline inhabiting Bodmin Moor.</dd>
+
+	<dt>2</dt>
+	<dd>A sea serpent.</dd>
+
+	<dt>3</dt>
+	<dd>A giant owl-like creature.</dd>
+
+	<dt>4</dt>
+	<dd>A large feline inhabiting Bodmin Moor.</dd>
+
+	<dt>5</dt>
+	<dd>A sea serpent.</dd>
+
+	<dt>6</dt>
+	<dd>A giant owl-like creature.</dd>
+
+	<dt>7</dt>
+	<dd>A large feline inhabiting Bodmin Moor.</dd>
+
+	<dt>8</dt>
+	<dd>A sea serpent.</dd>
+
+	<dt>9</dt>
+	<dd>A giant owl-like creature.</dd>
+
+	<dt>10</dt>
+	<dd>A large feline inhabiting Bodmin Moor.</dd>
+</dl>
+<br><br>
+<a href="#">Show All</a>
+<script>
+	$( "dd" ).addClass( "invisible" );
+
+// $('dt').click(function () {
+// 	if ($(this).hasClass('class-here')) {
+// 		$(this).removeClass('class-here');
+// 	} else {
+// 	#(this).addClass('class-here');
+// }
+// });
+
+	$('dt').click(function () {
+		$(this).toggleClass('highlight');
+		$(this).next().toggleClass('invisible');
+	});
+
+	$('a').click(function () {
+		$('dd').toggleClass('invisible');
+	});
+
+</script>
+
+</body>
+</html>
