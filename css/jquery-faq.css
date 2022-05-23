@@ -1,16 +1,17 @@
 body {
     background-color: #848487;
     color: #fff;
-    font-family: 'Noto Serif', serif;
 }
 
 dt {
+    font-family: 'Noto Serif', serif;
     font-weight: bolder;
     font-size: 24px;
     display: inline;
 }
 
 dd {
+    font-family: 'Noto Serif', serif;
     font-size: 18px;
     padding-top: 5px;
     padding-bottom: 10px;
