@@ -1,7 +1,23 @@
+body {
+    background-color: #848487;
+    color: #fff
+}
+
+dt {
+    font-size: 24px;
+    display: inline;
+}
+
+dd {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 1em;
+    display: list-item;
+}
+
 .invisible {
     visibility: hidden;
 }
-
 
 .highlight{
     position:relative;
@@ -17,7 +33,7 @@
     border-style:solid;
     border-color:orange;
     position:absolute;
-    /*width:calc(100% - 0.5em);*/
+    width:calc(100% - 0.5em);
     border-left-color:transparent;
 }
 
@@ -34,5 +50,5 @@ highlight:after{
     border-bottom-color:transparent;
     border-left-color:transparent;
     transform:rotate(180deg);
-    transform-origin:center right;
+    transform-origin:right;
 }
