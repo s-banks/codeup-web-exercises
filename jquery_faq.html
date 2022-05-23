@@ -5,6 +5,9 @@
 	<title>Title</title>
 	<link rel="stylesheet" href="css/jquery-faq.css">
 	<script src="js/jquery-3.6.0.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
 <dl>
@@ -42,7 +45,6 @@
 <a href="#">Show All</a>
 <script>
 	$( "dd" ).addClass( "invisible" );
-
 // $('dt').click(function () {
 // 	if ($(this).hasClass('class-here')) {
 // 		$(this).removeClass('class-here');
@@ -50,7 +52,6 @@
 // 	#(this).addClass('class-here');
 // }
 // });
-
 	$('dt').click(function () {
 		$(this).toggleClass('highlight');
 		$(this).next().toggleClass('invisible');
@@ -59,8 +60,6 @@
 	$('a').click(function () {
 		$('dd').toggleClass('invisible');
 	});
-
 </script>
-
 </body>
 </html>
