@@ -14,6 +14,10 @@
     display: none;
 }
 
+#cheater {
+    display: none;
+}
+
 @font-face {
     font-family: Pricedown;
     src: url(../font/pricedown-bl.ttf);

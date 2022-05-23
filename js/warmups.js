@@ -134,3 +134,13 @@ console.log("--------------- \n---------------");
 // Use an Event listener to trigger when the button is clicked.
 //         Use the value to change the background-color of the page to match the user's input value.
 //         example of input: "#00000", "black", "#FF00FF"
+
+
+function myFunction () {
+	// Code to do stuff after 300ms
+}
+
+$("#blah").keyup(function () {
+	// Code to do stuff immediately
+	setTimeout(myFunction, 300);
+});

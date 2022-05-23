@@ -14,6 +14,10 @@
     display: none;
 }
 
+#cheater {
+    display: none;
+}
+
 body{
     background-image: url("../img/80sbackground2.jpg");
     background-size: cover;
