@@ -10,11 +10,4 @@
 			$("#post").append(h1 + content + categories + date);
 		});
 	});
-
-
-
-
-
-
-
 }())
