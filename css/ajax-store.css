@@ -1,11 +1,17 @@
 body {
     background-color: lightsteelblue;
+    margin-left: 10px;
 }
 
 table {
     text-align: left;
+    border: black solid 1px;
 }
 
 th, td {
     padding-right: 15px;
+}
+
+th {
+    border-bottom: black solid 1px;
 }
