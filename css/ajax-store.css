@@ -1,0 +1,11 @@
+body {
+    background-color: lightsteelblue;
+}
+
+table {
+    text-align: left;
+}
+
+th, td {
+    padding-right: 15px;
+}
