@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WX Map</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="css/weather-map.css" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<ul class="nav nav-pills mb-3 bg-dark" id="pills-tab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="pills-5day-tab" data-bs-toggle="pill" data-bs-target="#forecast-5day" type="button" role="tab" aria-controls="pills-5day" aria-selected="false">5-Day Forecast</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">About</button>
+			</li>
+		</ul>
+
+	</nav>
+
+	<main>
+		<div class="tab-content" id="pills-tabContent">
+
+			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">First tab content
+
+			</div>
+
+
+			<div class="tab-pane fade" id="forecast-5day" role="tabpanel" aria-labelledby="pills-5day-tab">Second tab content
+
+
+			</div>
+
+
+			<div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="pills-contact-tab">Third tab content
+
+
+			</div>
+
+
+		</div>
+
+
+		<br><br><br><br><br><br><br><br><br>
+		<div id='map' style='width: 90vw; height: 75vh; margin: auto'>
+
+		</div>
+
+
+
+
+
+	</main>
+
+
+	<footer>
+
+
+	</footer>
+
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<script src="js/geocode-utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/weather-map.js"></script>
+</body>
+</html>

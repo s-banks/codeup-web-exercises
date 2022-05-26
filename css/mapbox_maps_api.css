@@ -17,6 +17,10 @@ a {
     flex-direction: row;
 }
 
+.mapboxgl-popup-anchor-bottom {
+
+}
+
 .mapboxgl-popup-content {
     background-color: #DFDAD9;
     text-align: center;
