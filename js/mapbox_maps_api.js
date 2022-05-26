@@ -20,7 +20,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 
 //creates marker at Casa Rio
-const MARKER = new mapboxgl.Marker()
+const MARKER = new mapboxgl.Marker({ "color": "#669f60" })
 	.setLngLat([-98.48813, 29.42369])
 	.addTo(map);
 //Click popup for Casa Rio
@@ -42,7 +42,7 @@ document.getElementById('casa-rio').addEventListener('click', () => {
 
 
 //creates marker at Briarhurst Manor Estate
-const MARKER2 = new mapboxgl.Marker()
+const MARKER2 = new mapboxgl.Marker({ "color": "#669f60" })
     .setLngLat([-104.90468, 38.85855])
     .addTo(map);
 //Click popup for Briarhurst Manor Estate
@@ -64,7 +64,7 @@ document.getElementById('briarhurst').addEventListener('click', () => {
 
 
 //creates marker at A'tavola
-const MARKER3 = new mapboxgl.Marker()
+const MARKER3 = new mapboxgl.Marker({ "color": "#669f60" })
     .setLngLat([-116.21334, 43.61918])
     .addTo(map);
 //Click popup for A'tavola
