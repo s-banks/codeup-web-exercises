@@ -5,33 +5,24 @@ const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/shroud2/cl3m9j9z4002z14qqu70q5tn5',
     center: [-98.48813, 29.42369], // starting position [lng, lat]
-    zoom: 15 // starting zoom
+    zoom: 10 // starting zoom
 });
+
+//add geocoding search
+map.addControl(
+    new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+    })
+);
 // Adds map zoom control
 map.addControl(new mapboxgl.NavigationControl());
 
-//object of restaurant locations
-let places = [
-    {
-        name: "Casa Rio",
-        coordinates: [-98.48813, 29.42369]
-    }, {
-        name: "Briarhurst Manor",
-        coordinates: [-104.90468, 38.85855]
-    }, {
-        name: "A'tavolla",
-        coordinates: [-116.21334, 43.61918]
-    }
-];
-//function places markers at all locations in places object
-places.forEach(function(place) {
-    let marker = new mapboxgl.Marker()
-        .setLngLat(place.coordinates)
-        .addTo(map)
-    }
-)
 
-
+//creates marker at Casa Rio
+const MARKER = new mapboxgl.Marker()
+	.setLngLat([-98.48813, 29.42369])
+	.addTo(map);
 //Click popup for Casa Rio
 MARKER.setLngLat([-98.48813, 29.42369]);
 const POPUP = new mapboxgl.Popup()
@@ -50,6 +41,10 @@ document.getElementById('casa-rio').addEventListener('click', () => {
 });
 
 
+//creates marker at Briarhurst Manor Estate
+const MARKER2 = new mapboxgl.Marker()
+    .setLngLat([-104.90468, 38.85855])
+    .addTo(map);
 //Click popup for Briarhurst Manor Estate
 MARKER2.setLngLat([-104.90468, 38.85855]);
 const POPUP2 = new mapboxgl.Popup()
@@ -68,6 +63,10 @@ document.getElementById('briarhurst').addEventListener('click', () => {
 });
 
 
+//creates marker at A'tavola
+const MARKER3 = new mapboxgl.Marker()
+    .setLngLat([-116.21334, 43.61918])
+    .addTo(map);
 //Click popup for A'tavola
 MARKER3.setLngLat([-116.21334, 43.61918]);
 const POPUP3 = new mapboxgl.Popup()
