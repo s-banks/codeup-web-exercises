@@ -1,5 +1,5 @@
 "use strict";
-//Sets up map with zoom control
+//Sets up basic map and styling
 mapboxgl.accessToken = MAPBOX_API_KEY;
 const map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -7,18 +7,41 @@ const map = new mapboxgl.Map({
     center: [-98.48813, 29.42369], // starting position [lng, lat]
     zoom: 15 // starting zoom
 });
+// Adds map zoom control
 map.addControl(new mapboxgl.NavigationControl());
 
+//object of restaurant locations
+let places = [
+    {
+        name: "Casa Rio",
+        coordinates: [-98.48813, 29.42369]
+    }, {
+        name: "Briarhurst Manor",
+        coordinates: [-104.90468, 38.85855]
+    }, {
+        name: "A'tavolla",
+        coordinates: [-116.21334, 43.61918]
+    }
+];
+//function places markers at all locations in places object
+places.forEach(function(place) {
+    let marker = new mapboxgl.Marker()
+        .setLngLat(place.coordinates)
+        .addTo(map)
+    }
+)
+
+
 //creates marker at Casa Rio
-const MARKER = new mapboxgl.Marker()
-	.setLngLat([-98.48813, 29.42369])
-	.addTo(map);
+// const MARKER = new mapboxgl.Marker()
+// 	.setLngLat([-98.48813, 29.42369])
+// 	.addTo(map);
 //Click popup for Casa Rio
 MARKER.setLngLat([-98.48813, 29.42369]);
 const POPUP = new mapboxgl.Popup()
-    .setHTML("<br><p style='color: red; font-size: 20px; font-weight: bold'>Casa Rio</p><p>430 E Commerce St. San Antonio, TX</p>");
+    .setHTML("<br><p style='color: red; font-size: 30px; font-weight: bold'>Casa Rio</p><p>430 E Commerce St. San Antonio, TX</p><img src='../img/casario.jpg' alt='casa rio'>");
 MARKER.setPopup(POPUP);
-//Casa Rio link
+//Casa Rio nav link
 document.getElementById('casa-rio').addEventListener('click', () => {
     map.flyTo({
         center: [
@@ -32,15 +55,15 @@ document.getElementById('casa-rio').addEventListener('click', () => {
 
 
 //creates marker at Briarhurst Manor Estate
-const MARKER2 = new mapboxgl.Marker()
-    .setLngLat([-104.90468, 38.85855])
-    .addTo(map);
+// const MARKER2 = new mapboxgl.Marker()
+//     .setLngLat([-104.90468, 38.85855])
+//     .addTo(map);
 //Click popup for Briarhurst Manor Estate
 MARKER2.setLngLat([-104.90468, 38.85855]);
 const POPUP2 = new mapboxgl.Popup()
-    .setHTML("<br><p style='color: red; font-size: 20px; font-weight: bold'>Briarhurst Manor Estate</p><p>404 Manitou Ave, Manitou Springs, CO 80829</p>");
+    .setHTML("<br><p style='color: red; font-size: 30px; font-weight: bold'>Briarhurst Manor Estate</p><p>404 Manitou Ave, Manitou Springs, CO 80829</p><img src='../img/briarhurst.jpg' alt='briarhurst manor'>");
 MARKER2.setPopup(POPUP2);
-//Briarhurst Manor Estate link
+//Briarhurst Manor Estate nav link
 document.getElementById('briarhurst').addEventListener('click', () => {
     map.flyTo({
         center: [
@@ -54,15 +77,15 @@ document.getElementById('briarhurst').addEventListener('click', () => {
 
 
 //creates marker at A'tavola
-const MARKER3 = new mapboxgl.Marker()
-    .setLngLat([-116.21334, 43.61918])
-    .addTo(map);
+// const MARKER3 = new mapboxgl.Marker()
+//     .setLngLat([-116.21334, 43.61918])
+//     .addTo(map);
 //Click popup for A'tavola
 MARKER3.setLngLat([-116.21334, 43.61918]);
 const POPUP3 = new mapboxgl.Popup()
-    .setHTML("<br><p style='color: red; font-size: 20px; font-weight: bold'>A'tavola</p><p>1515 W Grove St, Boise, ID</p>");
+    .setHTML("<br><p style='color: red; font-size: 30px; font-weight: bold'>A'tavola</p><p>1515 W Grove St, Boise, ID</p><img src='../img/atavola.jpg' alt='A-tavolla'>");
 MARKER3.setPopup(POPUP3);
-//A'tavola link
+//A'tavola nav link
 document.getElementById('atavola').addEventListener('click', () => {
     map.flyTo({
         center: [
