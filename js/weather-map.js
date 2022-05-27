@@ -9,10 +9,19 @@ const map = new mapboxgl.Map({
 	zoom: 10 // starting zoom
 });
 
+//click events to only show the map on the desired pages
+document.querySelector("#pills-home-tab").addEventListener("click", showMap);
+document.querySelector("#pills-5day-tab").addEventListener("click", showMap);
+document.querySelector("#pills-contact-tab").addEventListener("click", hideMap);
 
-
-
-
+//hide map function
+function hideMap() {
+	document.querySelector("#map").style.display = "none";
+}
+//show map function
+function showMap() {
+	document.querySelector("#map").style.display = "block";
+}
 
 
 
