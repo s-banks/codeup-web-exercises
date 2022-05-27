@@ -36,7 +36,7 @@
     let array3 = planetsArray[2];
     let array4 = planetsArray[3];
     let array5 = planetsArray[4];
-    let array6 = planetsArray[5];;
+    let array6 = planetsArray[5];
     let array7 = planetsArray[6];
     let array8 = planetsArray[7];
 

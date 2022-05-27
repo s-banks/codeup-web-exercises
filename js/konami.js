@@ -126,7 +126,7 @@ function buttonToggle() {
 				let reset = function() {
 					started = false;
 					count = 0;
-					return;
+
 				};
 				let key = e.keyCode;
 				if(!started){

@@ -9,6 +9,16 @@ const map = new mapboxgl.Map({
 	zoom: 10 // starting zoom
 });
 
+//add geocoding search
+map.addControl(
+	new MapboxGeocoder({
+		accessToken: mapboxgl.accessToken,
+		mapboxgl: mapboxgl
+	})
+);
+// Adds map zoom control
+map.addControl(new mapboxgl.NavigationControl());
+
 //click events to only show the map on the desired pages
 document.querySelector("#pills-home-tab").addEventListener("click", showMap);
 document.querySelector("#pills-5day-tab").addEventListener("click", showMap);
@@ -22,13 +32,6 @@ function hideMap() {
 function showMap() {
 	document.querySelector("#map").style.display = "block";
 }
-
-
-
-
-
-
-
 
 
 

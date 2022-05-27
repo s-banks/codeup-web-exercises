@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>WX Map</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link href="css/weather-map.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>WX Map</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    <link href="css/weather-map.css" rel="stylesheet">
 </head>
 <body>
-	<nav>
-		<ul class="nav nav-pills mb-3 bg-dark" id="pills-tab" role="tablist">
-			<li class="nav-item" role="presentation">
-				<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-			</li>
-			<li class="nav-item" role="presentation">
-				<button class="nav-link" id="pills-5day-tab" data-bs-toggle="pill" data-bs-target="#forecast-5day" type="button" role="tab" aria-controls="pills-5day" aria-selected="false">5-Day Forecast</button>
-			</li>
-			<li class="nav-item" role="presentation">
-				<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">About</button>
-			</li>
-		</ul>
+<nav>
+    <ul class="nav nav-pills mb-3 bg-dark" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-5day-tab" data-bs-toggle="pill" data-bs-target="#forecast-5day"
+                    type="button" role="tab" aria-controls="pills-5day" aria-selected="false">5-Day Forecast
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#about" type="button"
+                    role="tab" aria-controls="pills-contact" aria-selected="false">About
+            </button>
+        </li>
+    </ul>
 
-	</nav>
+</nav>
 
-	<main>
-		<div class="tab-content" id="pills-tabContent">
+<main>
+    <div class="tab-content" id="pills-tabContent">
 
-			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">First tab content
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">First tab
+            content
 
-			</div>
-
-
-			<div class="tab-pane fade" id="forecast-5day" role="tabpanel" aria-labelledby="pills-5day-tab">Second tab content
-
-
-			</div>
-
-
-			<div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="pills-contact-tab">Third tab content
+        </div>
 
 
-			</div>
+        <div class="tab-pane fade" id="forecast-5day" role="tabpanel" aria-labelledby="pills-5day-tab">Second tab
+            content
 
 
-		</div>
+        </div>
 
 
-		<br><br><br><br><br><br><br><br><br>
-		<div id='map' style='width: 90vw; height: 75vh; margin: auto'>
+        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <p>This site was designed and coded by Shane Banks as part of a class project while attending Codeup
+                (May-June 2022). The page is built using tools such as Mapbox GL, the OpenWeather API, jQuery,
+                JavaScript, Bootstrap, CSS, and HTML. It is designed to be responsive to improve the mobile experience,
+                while still providing a robust desktop environment for users on larger displays.</p>
 
-		</div>
-
-
-
-
-
-	</main>
+            <p>You can contact me or see my GitHub and LinkedIn profiles by following the links that are on my <a
+                    href="https://s-banks.github.io/" target="_blank"> GitHub.io site (WIP)</a>.</p>
 
 
-	<footer>
+        </div>
 
 
-	</footer>
+    </div>
 
-<script src="js/jquery-3.6.0.js"></script>
+
+    		<br><br><br><br><br><br><br><br><br>
+    <div id='map' style='width: 90vw; height: 75vh; margin: auto'>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+
+</footer>
+
+
 <script src="js/keys.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <script src="js/geocode-utils.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 <script src="js/weather-map.js"></script>
+<script src="js/jquery-3.6.0.js"></script>
 </body>
 </html>
