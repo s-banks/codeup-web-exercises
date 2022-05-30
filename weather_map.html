@@ -15,20 +15,22 @@
 <nav class="flex-column flex-sm-row">
     <ul class="nav nav-pills mb-3 bg-dark flex-column flex-sm-row align-items-center" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#home"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link " id="pills-5day-tab" data-bs-toggle="pill" data-bs-target="#forecast-5day"
-                    type="button" role="tab" aria-controls="pills-5day" aria-selected="false">5-Day Forecast
+            <button class="nav-link " id="pills-5day-tab" data-bs-toggle="pill" data-bs-target="#forecast-5day" type="button" role="tab" aria-controls="pills-5day" aria-selected="false">5-Day Forecast
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#about" type="button"
-                    role="tab" aria-controls="pills-contact" aria-selected="false">About
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">About
             </button>
         </li>
+        <div class="input d-flex col-md-3">
+            <input type="text" placeholder="Search by location" class="input_text form-control me-2" id="search">
+            <input type="submit" value="Submit" class="submit btn btn-outline-success" id="submit">
+        </div>
+        </div>
     </ul>
 </nav>
 
@@ -37,18 +39,18 @@
     <div class="tab-content" id="pills-tabContent">
         <!-- Home tab content -->
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <h2 style="text-align: center">San Antonio Area Weather</h2>
+            <h2 style="text-align: center"><span id="h2Location" class="title">San Antonio</span> Area Weather</h2>
             <div class="card five-day-card mb-3 container bg-dark text-white" style='width: 95vw; height: 30vh'>
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="img-fluid rounded-start" alt="...">
+                <div class="row g-0 ">
+                    <div class="col-md-2" id="current-icon">
+<!--The current wx image is placed here-->
                     </div>
                     <div class="col-md-8">
-                        <div class="card-body ">
-                            <h3 class="card-title">Weather Label</h3>
-                            <p class="card-text">High Temp Low Temp</p>
-                            <p class="card-text">HighFeels like</p>
-                            <p class="card-text">Wind speed and direction</p>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Current Conditions</h3>
+                            <p class="card-text">Current Temperature: <span id="current-temp"></span></p>
+                            <p class="card-text">It Feels like: <span id="feels-like"></span> </p>
+                            <p class="card-text">Today's Hi/Low: <span id="hi-low"></span></p>
                         </div>
                     </div>
                 </div>
@@ -115,8 +117,7 @@
 
     <br>
     <!--This is the div for the map image-->
-    <div class="" id='map' style='width: 90vw; height: 50vh; margin: auto'>
-    </div>
+    <div class="" id='map' style='width: 90vw; height: 50vh; margin: auto'></div>
 
 </main>
 
@@ -128,6 +129,7 @@
 
 <div class="scripts">
     <script src="js/keys.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <script src="js/geocode-utils.js"></script>
@@ -135,7 +137,6 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <script src="js/weather-map.js"></script>
-    <script src="js/jquery-3.6.0.js"></script>
 </div>
 
 </body>
