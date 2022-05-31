@@ -27,18 +27,25 @@
 
 
 
-// fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.42369&lon=-98.48813&appid=' + OPEN_WEATHER_APPID + '&units=imperial')
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data)
-// })
+fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.42369&lon=-98.48813&appid=' + OPEN_WEATHER_APPID + '&units=imperial')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+
+            let formattedDate = data["daily"]["0"].dt * 1000;
+let d = new Date(formattedDate).toLocaleDateString("en-US", { dateStyle: 'full' });
+            console.log(d);
+            let filter = d.slice(0, -6)
+            console.log(filter);
+    })
+
 
 
 //toggles the highlight class on each li
-let liList = document.querySelectorAll("li");
-for (let x of liList) {
-    x.classList.toggle("highlight");
-}
+// let liList = document.querySelectorAll("li");
+// for (let x of liList) {
+//     x.classList.toggle("highlight");
+// }
 
 
 //Set different font color based on array for all spans in a document
