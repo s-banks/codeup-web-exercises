@@ -75,7 +75,7 @@ span.title {
     color: #FFF;
 }
 
-.five-day-icon {
+.five-day-icon>img {
     width: 75%;
     height: auto;
 }

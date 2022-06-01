@@ -30,10 +30,10 @@ map.addControl(new mapboxgl.NavigationControl());
 fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.42369&lon=-98.48813&appid=' + OPEN_WEATHER_APPID + '&units=imperial')
 	.then(response => response.json())
 	.then(data => {
-		document.querySelector('#current-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['current']['weather']['0'].icon}@4x.png" className="img-fluid rounded-start "alt="...">`
-		document.querySelector('#current-temp').innerHTML = Math.round(data["current"].temp) //current temp
-		document.querySelector('#feels-like').innerHTML =Math.round(data["current"].feels_like) //feels like temp
-		document.querySelector('#hi-low').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '/' + Math.round(data["daily"]["0"]["temp"].min) //high temp today
+		document.querySelector('#current-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['current']['weather']['0'].icon}@4x.png" className="img-fluid rounded-start "alt="..."> ${data['current']['weather']['0'].description}`
+		document.querySelector('#current-temp').innerHTML = Math.round(data["current"].temp) + '&#176' //current temp
+		document.querySelector('#feels-like').innerHTML =Math.round(data["current"].feels_like) + '&#176' //feels like temp
+		document.querySelector('#hi-low').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176' //high temp today
 		let d1 = data["daily"]["0"].dt * 1000;
 		let d2 = data["daily"]["1"].dt * 1000;
 		let d3 = data["daily"]["2"].dt * 1000;
@@ -44,20 +44,36 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.42369&lon=-98.4881
 		document.querySelector("#date3") .innerHTML = new Date(d3).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
 		document.querySelector("#date4") .innerHTML = new Date(d4).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
 		document.querySelector("#date5") .innerHTML = new Date(d5).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
-		document.querySelector('#day1-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['0']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="...">`
-		document.querySelector('#day2-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['1']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="...">`
-		document.querySelector('#day3-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['2']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="...">`
-		document.querySelector('#day4-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['3']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="...">`
-		document.querySelector('#day5-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['4']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="...">`
+		document.querySelector('#day1-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['0']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['0']['weather']['0'].description}`
+		document.querySelector('#day2-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['1']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['1']['weather']['0'].description}`
+		document.querySelector('#day3-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['2']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['2']['weather']['0'].description}`
+		document.querySelector('#day4-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['3']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['3']['weather']['0'].description}`
+		document.querySelector('#day5-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['4']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['4']['weather']['0'].description}`
+		document.querySelector('#d1HiLo').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+		document.querySelector('#d1Precip').innerHTML = (data["daily"]["0"].pop * 100) + '%'
+
+		document.querySelector('#d2HiLo').innerHTML =Math.round(data["daily"]["1"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+		document.querySelector('#d2Precip').innerHTML = (data["daily"]["1"].pop * 100) + '%'
+		//console.log(data["daily"]["1"].pop);
+
+		document.querySelector('#d3HiLo').innerHTML =Math.round(data["daily"]["2"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+		document.querySelector('#d3Precip').innerHTML = (data["daily"]["2"].pop * 100) + '%'
+
+		document.querySelector('#d4HiLo').innerHTML =Math.round(data["daily"]["3"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+		document.querySelector('#d4Precip').innerHTML = (data["daily"]["3"].pop * 100) + '%'
+
+		document.querySelector('#d5HiLo').innerHTML =Math.round(data["daily"]["4"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+		document.querySelector('#d5Precip').innerHTML = (data["daily"]["4"].pop * 100) + '%'
 
 	})
 
 
+
 	//some date code
-	const d = new Date();
-	//let text = d.toLocaleDateString();
-	let text = new Date().toLocaleDateString("en-US", { dateStyle: 'full' });
-	document.getElementById("demo").innerHTML = text;
+	// const d = new Date();
+	// //let text = d.toLocaleDateString();
+	// let text = new Date().toLocaleDateString("en-US", { dateStyle: 'full' });
+	// document.getElementById("demo").innerHTML = text;
 
 
 
@@ -101,6 +117,36 @@ button.addEventListener('click', function(name){
 				document.querySelector('#current-temp').innerHTML = Math.round(data["current"].temp) //current temp
 				document.querySelector('#feels-like').innerHTML =Math.round(data["current"].feels_like) //feels like temp
 				document.querySelector('#hi-low').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '/' + Math.round(data["daily"]["0"]["temp"].min) //high temp today
+				let d1 = data["daily"]["0"].dt * 1000;
+				let d2 = data["daily"]["1"].dt * 1000;
+				let d3 = data["daily"]["2"].dt * 1000;
+				let d4 = data["daily"]["3"].dt * 1000;
+				let d5 = data["daily"]["4"].dt * 1000;
+				document.querySelector("#date1") .innerHTML = new Date(d1).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
+				document.querySelector("#date2") .innerHTML = new Date(d2).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
+				document.querySelector("#date3") .innerHTML = new Date(d3).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
+				document.querySelector("#date4") .innerHTML = new Date(d4).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
+				document.querySelector("#date5") .innerHTML = new Date(d5).toLocaleDateString("en-US", { dateStyle: 'full' }).slice(0, -6);
+				document.querySelector('#day1-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['0']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['0']['weather']['0'].description}`
+				document.querySelector('#day2-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['1']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['1']['weather']['0'].description}`
+				document.querySelector('#day3-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['2']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['2']['weather']['0'].description}`
+				document.querySelector('#day4-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['3']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['3']['weather']['0'].description}`
+				document.querySelector('#day5-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['4']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['4']['weather']['0'].description}`
+				document.querySelector('#d1HiLo').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+				document.querySelector('#d1Precip').innerHTML = (data["daily"]["0"].pop * 100) + '%'
+
+				document.querySelector('#d2HiLo').innerHTML =Math.round(data["daily"]["1"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+				document.querySelector('#d2Precip').innerHTML = (data["daily"]["1"].pop * 100) + '%'
+				//console.log(data["daily"]["1"].pop);
+
+				document.querySelector('#d3HiLo').innerHTML =Math.round(data["daily"]["2"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+				document.querySelector('#d3Precip').innerHTML = (data["daily"]["2"].pop * 100) + '%'
+
+				document.querySelector('#d4HiLo').innerHTML =Math.round(data["daily"]["3"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+				document.querySelector('#d4Precip').innerHTML = (data["daily"]["3"].pop * 100) + '%'
+
+				document.querySelector('#d5HiLo').innerHTML =Math.round(data["daily"]["4"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
+				document.querySelector('#d5Precip').innerHTML = (data["daily"]["4"].pop * 100) + '%'
 			})
 	})
  })
