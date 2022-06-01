@@ -50,20 +50,20 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.42369&lon=-98.4881
 		document.querySelector('#day4-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['3']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['3']['weather']['0'].description}`
 		document.querySelector('#day5-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['4']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['4']['weather']['0'].description}`
 		document.querySelector('#d1HiLo').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-		document.querySelector('#d1Precip').innerHTML = (data["daily"]["0"].pop * 100) + '%'
+		document.querySelector('#d1Precip').innerHTML = Math.round((data["daily"]["0"].pop * 100)) + '%'
 
 		document.querySelector('#d2HiLo').innerHTML =Math.round(data["daily"]["1"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-		document.querySelector('#d2Precip').innerHTML = (data["daily"]["1"].pop * 100) + '%'
+		document.querySelector('#d2Precip').innerHTML = Math.round((data["daily"]["1"].pop * 100)) + '%'
 		//console.log(data["daily"]["1"].pop);
 
 		document.querySelector('#d3HiLo').innerHTML =Math.round(data["daily"]["2"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-		document.querySelector('#d3Precip').innerHTML = (data["daily"]["2"].pop * 100) + '%'
+		document.querySelector('#d3Precip').innerHTML = Math.round((data["daily"]["2"].pop * 100)) + '%'
 
 		document.querySelector('#d4HiLo').innerHTML =Math.round(data["daily"]["3"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-		document.querySelector('#d4Precip').innerHTML = (data["daily"]["3"].pop * 100) + '%'
+		document.querySelector('#d4Precip').innerHTML = Math.round((data["daily"]["3"].pop * 100)) + '%'
 
 		document.querySelector('#d5HiLo').innerHTML =Math.round(data["daily"]["4"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-		document.querySelector('#d5Precip').innerHTML = (data["daily"]["4"].pop * 100) + '%'
+		document.querySelector('#d5Precip').innerHTML = Math.round((data["daily"]["4"].pop * 100)) + '%'
 
 	})
 
@@ -133,20 +133,20 @@ button.addEventListener('click', function(name){
 				document.querySelector('#day4-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['3']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['3']['weather']['0'].description}`
 				document.querySelector('#day5-icon').innerHTML = `<img src="http://openweathermap.org/img/wn/${data['daily']['4']['weather']['0'].icon}@4x.png" class="card-img-top mx-auto" alt="..."><br>${data['daily']['4']['weather']['0'].description}`
 				document.querySelector('#d1HiLo').innerHTML =Math.round(data["daily"]["0"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-				document.querySelector('#d1Precip').innerHTML = (data["daily"]["0"].pop * 100) + '%'
+				document.querySelector('#d1Precip').innerHTML = Math.round((data["daily"]["0"].pop * 100)) + '%'
 
 				document.querySelector('#d2HiLo').innerHTML =Math.round(data["daily"]["1"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-				document.querySelector('#d2Precip').innerHTML = (data["daily"]["1"].pop * 100) + '%'
+				document.querySelector('#d2Precip').innerHTML = Math.round((data["daily"]["1"].pop * 100)) + '%'
 				//console.log(data["daily"]["1"].pop);
 
 				document.querySelector('#d3HiLo').innerHTML =Math.round(data["daily"]["2"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-				document.querySelector('#d3Precip').innerHTML = (data["daily"]["2"].pop * 100) + '%'
+				document.querySelector('#d3Precip').innerHTML = Math.round((data["daily"]["2"].pop * 100)) + '%'
 
 				document.querySelector('#d4HiLo').innerHTML =Math.round(data["daily"]["3"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-				document.querySelector('#d4Precip').innerHTML = (data["daily"]["3"].pop * 100) + '%'
+				document.querySelector('#d4Precip').innerHTML = Math.round((data["daily"]["3"].pop * 100)) + '%'
 
 				document.querySelector('#d5HiLo').innerHTML =Math.round(data["daily"]["4"]["temp"].max) + '&#176' + '/' + Math.round(data["daily"]["0"]["temp"].min) + '&#176'
-				document.querySelector('#d5Precip').innerHTML = (data["daily"]["4"].pop * 100) + '%'
+				document.querySelector('#d5Precip').innerHTML = Math.round((data["daily"]["4"].pop * 100)) + '%'
 			})
 	})
  })
