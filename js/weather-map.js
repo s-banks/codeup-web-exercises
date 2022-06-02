@@ -4,8 +4,6 @@
 // to break all the functions down, separate the various pieces, and rebuild without all the duplication.
 
 
-
-
 (function () {
 
 const startPosition = [-98.48813, 29.42369]
