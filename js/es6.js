@@ -94,4 +94,4 @@ let list = '<ul>';
 }
 list += '</ul>';
 
-console.log(users);
+console.log(users); //attached to es6.html
