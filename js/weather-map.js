@@ -1,4 +1,11 @@
 "use strict";
+
+// So, this code is very hacked together from working through problems and solutions. It needs a lot of clean up and complete refactoring
+// to break all the functions down, separate the various pieces, and rebuild without all the duplication.
+
+
+
+
 (function () {
 
 const startPosition = [-98.48813, 29.42369]
@@ -17,13 +24,13 @@ let marker = new mapboxgl.Marker({
 	.setLngLat(startPosition)
 	.addTo(map);
 
-function onDragEnd() {
-	const lngLat = marker.getLngLat();
-	let coordinates = document.querySelector("#coordinates")
-	 coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-}
-
-marker.on('dragend', onDragEnd);
+// function onDragEnd() {
+// 	const lngLat = marker.getLngLat();
+// 	let coordinates = document.querySelector("#coordinates")
+// 	 coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+// }
+//
+// marker.on('dragend', onDragEnd);
 
 //add zoom control to map
 map.addControl(new mapboxgl.NavigationControl());
