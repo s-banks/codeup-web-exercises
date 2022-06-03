@@ -70,8 +70,8 @@ console.log(userEmail);
 
 
 //6 Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-    const userList = users.reduce((newNames, names) => {
-        return newNames + ', ' + names.name;
+    const userList = users.reduce((newNames, names, z, y) => {
+        return newNames + names.name + ', ';
     }, "");
     console.log(userList);
 
