@@ -3,20 +3,31 @@
 //(function () {
 
 
-// Octokit.js
-// https://github.com/octokit/core.js#readme
+let button = document.querySelector('#submit');
+let input = document.querySelector('#search');
+button.addEventListener('click', function(e){
+    e.preventDefault();
+    let uName = input.value;
+        //console.log(uName);
+//let uName = prompt("Please enter a username to check.")
+const URL = `https://api.github.com/users/${uName}/events/public`
+ fetch(URL, {headers: {'Authorization': `token ${GITHUB_API_KEY}`}})
+     .then((resp) => resp.json())
+     .then((data) => {
+         //console.log(data)
+         document.querySelector('#user').innerHTML = `${data['0']['actor'].login}`,
+          document.querySelector('#last-push').innerHTML = `${data['0']['created_at']}`,
+          document.querySelector('#repo').innerHTML = `${data['0']['repo'].name}`
+         })
+     .catch(error => console.error(error));
+})
 
 
-const githubPromise = fetch('https://api.github.com/repositories');
-const bitbucketPromise = fetch('https://api.bitbucket.org/2.0/repositories');
 
-Promise.all([githubPromise, bitbucketPromise])
-    .then(function(data) {
-        // here data is an array of the resolved values from each promise
-        // we can now do something with both pieces of data
-    })
-    .catch(function(error) {
-        // handle errors
-    });
+
+
+
 
 //}())
+
+
