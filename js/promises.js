@@ -1,8 +1,6 @@
 "use strict";
 
-//(function () {
-
-
+(function () {
 let button = document.querySelector('#submit');
 let input = document.querySelector('#search');
 button.addEventListener('click', function(e){
@@ -21,13 +19,4 @@ const URL = `https://api.github.com/users/${uName}/events/public`
          })
      .catch(error => console.error(error));
 })
-
-
-
-
-
-
-
-//}())
-
-
+}())
