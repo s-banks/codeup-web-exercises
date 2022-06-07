@@ -136,11 +136,19 @@ console.log("--------------- \n---------------");
 //         example of input: "#00000", "black", "#FF00FF"
 
 
-function myFunction () {
-	// Code to do stuff after 300ms
-}
+// function myFunction () {
+// 	// Code to do stuff after 300ms
+// }
+//
+// $("#blah").keyup(function () {
+// 	// Code to do stuff immediately
+// 	setTimeout(myFunction, 300);
+// });
 
-$("#blah").keyup(function () {
-	// Code to do stuff immediately
-	setTimeout(myFunction, 300);
-});
+const URL = 'https://quotes.rest.qod'
+const warmup = () => {
+	return fetch(URL)
+		.then(res => res.json())
+		.then(results => console.log(results))
+		.catch(error => console.error(error))
+}
