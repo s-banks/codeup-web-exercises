@@ -1,7 +1,7 @@
 "use strict";
 
-console.log("Yay! I completed the warm-up!");
-console.log("--------------- \n---------------");
+// console.log("Yay! I completed the warm-up!");
+// console.log("--------------- \n---------------");
 // function fizzBuzz() {
 // 	for (let i = 1; i <= 100; i++) {
 // 		if(i % 15 === 0) {
@@ -145,10 +145,11 @@ console.log("--------------- \n---------------");
 // 	setTimeout(myFunction, 300);
 // });
 
-const URL = 'https://quotes.rest.qod'
+const URL = 'https://quotes.rest/qod'
 const warmup = () => {
 	return fetch(URL)
 		.then(res => res.json())
 		.then(results => console.log(results))
 		.catch(error => console.error(error))
 }
+warmup();
